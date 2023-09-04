@@ -690,7 +690,7 @@ export const drawCNN = (width, height, cnnGroup, nodeMouseOverHandler,
   redChannel.append('tspan')
     .style('dominant-baseline', 'hanging')
     .style('fill', '#C95E67')
-    .text('Red');
+    .text('White');
   
   redChannel.append('tspan')
     .style('dominant-baseline', 'hanging')
