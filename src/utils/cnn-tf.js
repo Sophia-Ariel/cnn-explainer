@@ -1,7 +1,7 @@
 /* global tf */
 
 // Network input image size
-const networkInputSize = 64;
+const networkInputSize = 28;
 
 // Enum of node types
 const nodeType = {
@@ -310,7 +310,7 @@ const cropCentralSquare = (arr) => {
  */
 const imageDataTo3DTensor = (imageData, width, height, normalize=true) => {
   // Create array placeholder for the 3d array
-  let imageArray = tf.fill([width, height, 3], 0).arraySync();
+  let imageArray = tf.fill([width, height, 1], 0).arraySync();
 
   // Iterate through the data to fill out channel arrays above
   for (let i = 0; i < imageData.length; i++) {
@@ -327,7 +327,7 @@ const imageDataTo3DTensor = (imageData, width, height, normalize=true) => {
       if (normalize) {
         curEntry /= 255;
       }
-      imageArray[row][column][channelIndex] = curEntry;
+      imageArray[row][column][0] = curEntry;
     }
   }
 
