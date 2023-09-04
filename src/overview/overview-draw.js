@@ -155,8 +155,8 @@ export const drawCustomImage = (image, inputLayer) => {
     let column = pixeIndex % imageLength;
 
     let red = inputLayer[0].output[row][column];
-    let green = inputLayer[1].output[row][column];
-    let blue = inputLayer[2].output[row][column];
+    let green = inputLayer[0].output[row][column];
+    let blue = inputLayer[0].output[row][column];
 
     imageSingleArray[i] = red * 255;
     imageSingleArray[i + 1] = green * 255;
