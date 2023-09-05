@@ -1183,7 +1183,7 @@ export const drawFlatten = (curLayerIndex, d, i, width, height) => {
 
   flattenFactoredFDict = {};
   for (let f = 0; f < flattenLength; f++) {
-    let loopFactors = [0, 9];
+    let loopFactors = [0,1,2,3,4,5,6,7,8,9];
     loopFactors.forEach(l => {
       let factoredF = f + l * flattenLength;
       flattenFactoredFDict[factoredF] = cnn.flatten[factoredF].output;
@@ -1266,7 +1266,7 @@ export const drawFlatten = (curLayerIndex, d, i, width, height) => {
       flattenLength * (n + 1)).map(d => d.outputLinks[i].weight));
     meanValues.push({index: n, output: meanOutput, weight: meanWeight});
     */
-    meanValues.push({index: n});
+    // meanValues.push({index: n});
   }
 
   // Compute the middle gap
