@@ -1189,7 +1189,7 @@ export const drawFlatten = (curLayerIndex, d, i, width, height) => {
       flattenFactoredFDict[factoredF] = cnn.flatten[factoredF].output;
       flattenLayerLeftPart.append('rect')
         .attr('x', intermediateX1)
-        .attr('y', l === 0 ? topY + f * pixelHeight : bottomY + f * pixelHeight)
+        .attr('y', topY + l*(bottomY-topY)/9 + f * pixelHeight)
         .attr('width', pixelWidth)
         .attr('height', pixelHeight)
         .style('cursor', 'crosshair')
@@ -1201,7 +1201,7 @@ export const drawFlatten = (curLayerIndex, d, i, width, height) => {
       // Flatten -> output
       linkData.push({
         source: {x: intermediateX1 + pixelWidth + 3,
-          y:  l === 0 ? topY + f * pixelHeight : bottomY + f * pixelHeight},
+          y:  topY + l*(bottomY-topY)/9 + f * pixelHeight},
         target: {x: intermediateX2,
           //nodeCoordinate[curLayerIndex][i].x - nodeLength,
           y: nodeCoordinate[curLayerIndex][i].y + nodeLength / 2},
@@ -1219,7 +1219,7 @@ export const drawFlatten = (curLayerIndex, d, i, width, height) => {
       let row = Math.floor(f / preLayerDimension);
       linkData.push({
         target: {x: intermediateX1 - 3,
-          y:  l === 0 ? topY + f * pixelHeight : bottomY + f * pixelHeight},
+          y:  topY + l*(bottomY-topY)/9 + f * pixelHeight},
         source: {x: leftX + nodeLength + 3,
           y: nodeCoordinate[curLayerIndex - 1][l].y + (2 * row + 1) * preLayerGap},
         index: factoredF,
