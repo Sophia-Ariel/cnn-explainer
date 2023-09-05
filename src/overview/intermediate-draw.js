@@ -867,14 +867,13 @@ const drawIntermediateLayerAnnotation = (arg) => {
       kernelRectLength * 3 + 5;
     dr = 20;
 
-    sliderX2 = leftX;
-      sliderY2 = nodeCoordinate[curLayerIndex - 1][1].y + nodeLength +
-    kernelRectLength * 3;
-    arrowSX2 = leftX - kernelRectLength * 3;
-    arrowSY2 = nodeCoordinate[curLayerIndex - 1][1].y + nodeLength + 15;
-    arrowTX2 = leftX - 13;
-    arrowTY2 =  nodeCoordinate[curLayerIndex - 1][1].y + 15;
-    dr2 = 35;
+    // sliderX2 = leftX;
+    // sliderY2 = nodeCoordinate[curLayerIndex - 1][1].y + nodeLength + kernelRectLength * 3;
+    // arrowSX2 = leftX - kernelRectLength * 3;
+    // arrowSY2 = nodeCoordinate[curLayerIndex - 1][1].y + nodeLength + 15;
+    // arrowTX2 = leftX - 13;
+    // arrowTY2 =  nodeCoordinate[curLayerIndex - 1][1].y + 15;
+    // dr2 = 35;
   } else {
     sliderX = leftX - 3 * kernelRectLength * 3;
     sliderY = nodeCoordinate[curLayerIndex - 1][0].y + nodeLength / 3;
@@ -882,13 +881,13 @@ const drawIntermediateLayerAnnotation = (arg) => {
     arrowSY = nodeCoordinate[curLayerIndex - 1][0].y + nodeLength - 10;
     dr = 50;
 
-    sliderX2 = leftX - 3 * kernelRectLength * 3;
-    sliderY2 = nodeCoordinate[curLayerIndex - 1][2].y - 3;
-    arrowTX2 = leftX - kernelRectLength * 3 - 4;
-    arrowTY2 = nodeCoordinate[curLayerIndex - 1][2].y + kernelRectLength * 3 + 6;
-    arrowSX2 = leftX - kernelRectLength * 3 - 13;
-    arrowSY2 = nodeCoordinate[curLayerIndex - 1][2].y + 26;
-    dr2 = 20;
+    // sliderX2 = leftX - 3 * kernelRectLength * 3;
+    // sliderY2 = nodeCoordinate[curLayerIndex - 1][2].y - 3;
+    // arrowTX2 = leftX - kernelRectLength * 3 - 4;
+    // arrowTY2 = nodeCoordinate[curLayerIndex - 1][2].y + kernelRectLength * 3 + 6;
+    // arrowSX2 = leftX - kernelRectLength * 3 - 13;
+    // arrowSY2 = nodeCoordinate[curLayerIndex - 1][2].y + 26;
+    // dr2 = 20;
   }
 
   let slideText = kernelAnnotation.append('text')
@@ -967,16 +966,16 @@ const drawIntermediateLayerAnnotation = (arg) => {
     .style('dominant-baseline', 'hanging')
     .text('to see value!')
 
-  drawArrow({
-    group: group,
-    tx: arrowTX2,
-    ty: arrowTY2,
-    sx: arrowSX2,
-    sy: arrowSY2,
-    dr: dr2,
-    hFlip: !isFirstConv,
-    marker: 'marker'
-  });
+  // drawArrow({
+  //   group: group,
+  //   tx: arrowTX2,
+  //   ty: arrowTY2,
+  //   sx: arrowSX2,
+  //   sy: arrowSY2,
+  //   dr: dr2,
+  //   hFlip: !isFirstConv,
+  //   marker: 'marker'
+  // });
 
 
   // Add annotation for the sum operation
@@ -1285,32 +1284,32 @@ export const drawConv1 = (curLayerIndex, d, i, width, height,
       nodeLength * 10 - 25
   });
 
-  drawIntermediateLayerLegend({
-    legendHeight: 5,
-    curLayerIndex: curLayerIndex,
-    range: range,
-    minMax: finalMinMax,
-    group: intermediateLayer,
-    width: 2 * nodeLength + intermediateGap,
-    x: nodeCoordinate[curLayerIndex - 1][2].x,
-    y: svgPaddings.top + vSpaceAroundGap * (10) + vSpaceAroundGap + 
-      nodeLength * 10
-  });
+  // drawIntermediateLayerLegend({
+  //   legendHeight: 5,
+  //   curLayerIndex: curLayerIndex,
+  //   range: range,
+  //   minMax: finalMinMax,
+  //   group: intermediateLayer,
+  //   width: 2 * nodeLength + intermediateGap,
+  //   x: nodeCoordinate[curLayerIndex - 1][2].x,
+  //   y: svgPaddings.top + vSpaceAroundGap * (10) + vSpaceAroundGap + 
+  //     nodeLength * 10
+  // });
 
-  drawIntermediateLayerLegend({
-    legendHeight: 5,
-    curLayerIndex: curLayerIndex,
-    range: kernelRange,
-    minMax: kernelMinMax,
-    group: intermediateLayer,
-    width: 2 * nodeLength + intermediateGap,
-    x: targetX + nodeLength - (2 * nodeLength + intermediateGap),
-    y: svgPaddings.top + vSpaceAroundGap * (10) + vSpaceAroundGap + 
-      nodeLength * 10,
-    gradientAppendingName: 'kernelColorGradient',
-    colorScale: layerColorScales.weight,
-    gradientGap: 0.2
-  });
+  // drawIntermediateLayerLegend({
+  //   legendHeight: 5,
+  //   curLayerIndex: curLayerIndex,
+  //   range: kernelRange,
+  //   minMax: kernelMinMax,
+  //   group: intermediateLayer,
+  //   width: 2 * nodeLength + intermediateGap,
+  //   x: targetX + nodeLength - (2 * nodeLength + intermediateGap),
+  //   y: svgPaddings.top + vSpaceAroundGap * (10) + vSpaceAroundGap + 
+  //     nodeLength * 10,
+  //   gradientAppendingName: 'kernelColorGradient',
+  //   colorScale: layerColorScales.weight,
+  //   gradientGap: 0.2
+  // });
 
   // Show everything
   svg.selectAll('g.intermediate-layer, g.intermediate-layer-annotation')
