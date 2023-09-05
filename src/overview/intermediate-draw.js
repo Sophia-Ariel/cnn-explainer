@@ -937,34 +937,34 @@ const drawIntermediateLayerAnnotation = (arg) => {
   });
 
   // Add kernel annotation
-  let slideText2 = kernelAnnotation.append('text')
-    .attr('x', sliderX2)
-    .attr('y', sliderY2)
-    .attr('class', 'annotation-text')
-    .style('dominant-baseline', 'hanging')
-    .style('text-anchor', isFirstConv ? 'start' : 'end');
+  // let slideText2 = kernelAnnotation.append('text')
+  //   .attr('x', sliderX2)
+  //   .attr('y', sliderY2)
+  //   .attr('class', 'annotation-text')
+  //   .style('dominant-baseline', 'hanging')
+  //   .style('text-anchor', isFirstConv ? 'start' : 'end');
 
-  slideText2.append('tspan')
-    .style('dominant-baseline', 'hanging')
-    .text('Each input chanel');
+  // slideText2.append('tspan')
+  //   .style('dominant-baseline', 'hanging')
+  //   .text('Each input chanel');
 
-  slideText2.append('tspan')
-    .attr('x', sliderX)
-    .attr('dy', '1em')
-    .style('dominant-baseline', 'hanging')
-    .text('gets a different kernel');
+  // slideText2.append('tspan')
+  //   .attr('x', sliderX)
+  //   .attr('dy', '1em')
+  //   .style('dominant-baseline', 'hanging')
+  //   .text('gets a different kernel');
 
-  slideText2.append('tspan')
-    .attr('x', sliderX)
-    .attr('dy', '1.3em')
-    .style('font-weight', 700)
-    .style('dominant-baseline', 'hanging')
-    .text('Hover over ');
+  // slideText2.append('tspan')
+  //   .attr('x', sliderX)
+  //   .attr('dy', '1.3em')
+  //   .style('font-weight', 700)
+  //   .style('dominant-baseline', 'hanging')
+  //   .text('Hover over ');
 
-  slideText2.append('tspan')
-    .style('font-weight', 400)
-    .style('dominant-baseline', 'hanging')
-    .text('to see value!')
+  // slideText2.append('tspan')
+  //   .style('font-weight', 400)
+  //   .style('dominant-baseline', 'hanging')
+  //   .text('to see value!')
 
   // drawArrow({
   //   group: group,
