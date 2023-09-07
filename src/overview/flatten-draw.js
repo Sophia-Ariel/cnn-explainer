@@ -1183,7 +1183,7 @@ export const drawFlatten = (curLayerIndex, d, i, width, height) => {
 
   flattenFactoredFDict = {};
   for (let f = 0; f < flattenLength; f++) {
-    let loopFactors = [0,1,2,3,4,5,6,7,8,9];
+    let loopFactors = [...Array(cnn[curLayerIndex - 1].length).keys()];
     loopFactors.forEach(l => {
       let factoredF = f + l * flattenLength;
       flattenFactoredFDict[factoredF] = cnn.flatten[factoredF].output;
