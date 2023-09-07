@@ -1,11 +1,11 @@
 name: build
 
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
+  # Triggers the workflow on push or pull request events but only for the mnist branch
   push:
-    branches: [ master ]
+    branches: [ mnist ]
   pull_request:
-    branches: [ master ]
+    branches: [ mnist ]
   schedule:
     - cron: "0 0 * * *"
 
