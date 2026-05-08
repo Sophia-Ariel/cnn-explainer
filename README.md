@@ -16,7 +16,7 @@ Wang, Zijie J., Robert Turko, Omar Shaikh, Haekyu Park, Nilaksh Das, Fred Hohman
 
 ## Live Demo
 
-For a live demo, visit: http://poloclub.github.io/cnn-explainer/
+For a live demo, visit: http://poloclub.github.io/cnn-explainer/ or https://sophia-ariel.github.io/cnn-explainer/ for this fork.
 
 ## Running Locally
 
